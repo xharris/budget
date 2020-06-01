@@ -1,0 +1,81 @@
+@import "variables";
+
+.c-button {
+  border: none;
+  outline: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  height: 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  * {
+    user-select: none !important;
+  }
+
+  transition: all ease-in-out 0.2s;
+
+  &:not(.labeled) {
+    width: 35px;
+
+    &.round {
+      width: 28px;
+    }
+  }
+
+  &.labeled {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+
+    > * {
+      margin: 0px 4px;
+    }
+
+    > .label {
+      color: $button-color;
+      font-size: 16px;
+    }
+  }
+
+  &:hover,
+  &.selected {
+    .material-icons {
+      color: lighten($button-color, 20%);
+    }
+
+    &.round:not(.labeled) {
+      border-radius: 15px;
+    }
+
+    &.themed .material-icons {
+      color: lighten($theme-color, 10%);
+    }
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &.selected {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  img {
+    width: 15px;
+    height: 15px;
+    padding-left: 3px;
+  }
+
+  .material-icons {
+    font-size: 15px;
+    color: $button-color;
+    transition: all ease-in-out 0.1s;
+  }
+  &.themed .material-icons {
+    color: $theme-color;
+  }
+}

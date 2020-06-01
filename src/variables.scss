@@ -1,0 +1,42 @@
+/* ProggySquare */
+@font-face {
+  font-family: "ProggySquare";
+  src: url("include/proggyfonts-1.1.0/fonts/ProggySquareSZ.ttf")
+    format("truetype");
+  unicode-range: U+20-7E;
+}
+
+// MIXINS
+.win-drag,
+%win-drag {
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.win-nodrag,
+%win-nodrag {
+  -webkit-app-region: none;
+  user-select: initial;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  not supported by any browser */
+}
+
+// VARIABLES
+$theme-color: #5ad9a4;
+$theme-color-dark: darken($theme-color, 15%);
+$ide-bg-color: #354048;
+$button-color: #b0bec5;
+
+$workspace-bg-color: #f5f5f5;
+$workspace-text-color: #212121;
+
+$dark-workspace-bg-color: #212121;
+$dark-workspace-text-color: #f5f5f5;

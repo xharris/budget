@@ -1,0 +1,10 @@
+@import "variables";
+
+.c-money {
+  &.negative {
+    color: #ff8a80;
+  }
+  &.positive {
+    color: #dcedc8;
+  }
+}

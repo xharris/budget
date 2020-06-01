@@ -1,0 +1,13 @@
+@import "variables";
+
+.c-accountlist {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: $workspace-bg-color;
+  color: $workspace-text-color;
+}
+
+.App.dark .c-accountlist {
+  background-color: $dark-workspace-bg-color;
+  color: $dark-workspace-text-color;
+}

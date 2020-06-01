@@ -1,0 +1,48 @@
+@import "variables";
+
+.c-workspace {
+  display: flex;
+  flex: 0 1 100%;
+  min-height: 0;
+  overflow: hidden;
+
+  // filter: drop-shadow(3px 3px 1px rgba(1, 1, 1, 0.5));
+
+  > .inner {
+    width: 100%;
+    position: relative;
+    margin: 5px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    background: transparent; // background-color: $workspace-bg-color;
+    color: $workspace-text-color;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+
+    clip-path: circle(100% at center);
+
+    transition: all ease-in-out 1s;
+
+    > * {
+      box-sizing: border-box;
+    }
+
+    > .c-accountlist {
+      flex: 0 0 200px;
+    }
+
+    > *:not(.c-accountlist) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &.hidden > .inner {
+    clip-path: circle(0% at center);
+  }
+}
+
+.App.dark .c-workspace .inner {
+  background: transparent; // background-color: $dark-workspace-bg-color;
+  color: $dark-workspace-text-color;
+}

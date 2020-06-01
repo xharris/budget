@@ -1,0 +1,54 @@
+@import "variables";
+
+.c-search {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  > .material-icons {
+    position: absolute;
+    top: 55%;
+    left: 0px;
+    transform: translate(-100%, -50%);
+    font-size: 16px;
+    padding-left: 5px;
+    color: #e0e0e0;
+    pointer-events: none;
+
+    transition: all ease-in-out 0.2s;
+  }
+
+  &.active > .material-icons {
+    left: 3px;
+    transform: translate(0%, -50%);
+  }
+
+  > input {
+    border: none;
+    outline: none;
+    padding: 2px 6px;
+    height: 20px;
+    font-size: 16px;
+    background: transparent;
+    color: #e0e0e0;
+    transition: all ease-in-out 0.2s;
+
+    &::placeholder {
+      color: #e0e0e0;
+    }
+
+    &::hover::placeholder {
+      color: #e0e0e0;
+    }
+  }
+
+  &.active {
+    padding-left: 26px;
+  }
+}

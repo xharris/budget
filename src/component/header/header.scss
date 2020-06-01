@@ -1,0 +1,50 @@
+@import "variables";
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px;
+  background-color: rgba(57, 65, 78, 0.4);
+
+  .tools {
+    @extend %win-drag;
+    flex: 0 1 100%;
+    display: flex;
+
+    * {
+      @extend %win-nodrag;
+    }
+
+    > .c-button {
+      margin-right: 2px;
+    }
+  }
+
+  .c-search {
+    flex: 0 0 200px;
+    margin-right: 2px;
+
+    > input {
+      height: 24px;
+    }
+  }
+
+  .search-container {
+    position: relative;
+    flex: 0 1 30%;
+
+    &:hover {
+      .project-title {
+        opacity: 0;
+      }
+      .c-search {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.c-windowbuttons {
+  display: flex;
+}
