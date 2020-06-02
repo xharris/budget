@@ -38,6 +38,7 @@
     > .label {
       color: $button-color;
       font-size: 16px;
+      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -61,7 +62,12 @@
   }
 
   &.selected {
-    border-color: rgba(0, 0, 0, 0.4);
+    // border-color: rgba(0, 0, 0, 0.4);
+    > .label {
+      text-decoration: underline;
+      font-weight: 900;
+      color: white;
+    }
   }
 
   img {

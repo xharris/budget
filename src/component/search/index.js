@@ -3,20 +3,23 @@ import PropTypes from "prop-types"
 
 import "./search.scss"
 
-const Search = ({ placeholder, disabled }) => {
+const Search = ({ className, placeholder, disabled }) => {
   const [hovering, setHovering] = useState(false)
   const [focused, setFocused] = useState(false)
   const el_input = useRef()
 
   return (
     <div
-      className={`c-search ${
+      className={[
+        "c-search",
         disabled
           ? "win-drag"
           : (hovering || focused) && !disabled
           ? "active win-nodrag"
-          : "win-nodrag"
-      } ${disabled ? "disabled" : ""}`}
+          : "win-nodrag",
+        disabled ? "disabled" : "",
+        className
+      ].join(" ")}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
@@ -40,11 +43,13 @@ const Search = ({ placeholder, disabled }) => {
 }
 
 Search.defaultProps = {
+  className: "",
   placeholder: "Search",
   disabled: false
 }
 
 Search.propTypes = {
+  className: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool
 }

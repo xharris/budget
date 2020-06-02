@@ -6,64 +6,33 @@
   padding: 0px 10px;
 
   .sub-header {
+    display: flex;
     padding: 8px 10px;
     box-sizing: border-box;
+    background-color: $input-bg-color;
+    justify-content: space-between;
 
-    > .date {
-      font-size: 32px;
+    > .date-pickers {
+      flex: 0 0 180px;
+      display: flex;
+      align-items: stretch;
+
+      > * {
+        margin-right: 4px;
+      }
+
+      > span {
+        display: flex;
+        align-items: center;
+      }
+
+      .c-datepicker:hover {
+        background-color: $dark-workspace-bg-color;
+      }
     }
-  }
 
-  .table-container {
-    flex: 0 1 100%;
-    overflow: hidden;
-  }
-
-  .ReactVirtualized__Table__headerRow {
-    padding: 0px;
-    padding: 10px 0px;
-  }
-
-  .ReactVirtualized__Table__Grid {
-    outline: none;
-  }
-
-  .ReactVirtualized__Table__headerColumn {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0 !important;
-  }
-
-  .ReactVirtualized__Table__headerTruncatedText {
-    display: flex;
-    flex: 0 1 100%;
-    flex-direction: row;
-    justify-content: left;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .ReactVirtualized__Table__row {
-    &.odd {
-      background-color: transparentize(#fff, 0.95);
-    }
-    &.even {
-      background-color: transparentize(#000, 0.95);
-    }
-  }
-
-  .DragHandle {
-    cursor: pointer;
-    border-radius: 2px;
-    box-sizing: border-box;
-    min-width: 16px;
-    text-align: center;
-    z-index: 1000;
-
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      background-color: transparentize(#ffffff, 0.75);
+    .c-search {
+      flex: 0 1 50%;
     }
   }
 }

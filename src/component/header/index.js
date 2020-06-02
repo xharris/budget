@@ -43,7 +43,7 @@ const Header = ({ onViewSelect, defaultView }) => {
 
   return (
     <div className="c-header win-drag">
-      <Search placeholder="myproject" />
+      <div className="title">BlankE Finance</div>
       <div className="tools">
         <Button
           icon="home"
